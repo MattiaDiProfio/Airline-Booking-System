@@ -461,8 +461,3 @@ if __name__ == "__main__":
             g.add_edge(reader[i][0], reader[i][1].lstrip())
         
     app = HomeWindow(db, g)
-
-
-# TODO (4) add comments (settings window onwards) and refactor code
-# TODO (5) write a README file for this project
-# TODO (5) delete all tables and let other test it and upload to gihub, obscure sensible details
