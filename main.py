@@ -4,19 +4,13 @@ sys.path.append('../')
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
-
 from mysql.connector.errors import *
-
 from structs.database_interface import DatabaseInterface
 from structs.graph import Graph
-
 import re
 import time
 import csv 
-
 from utils import *
-
-# Import windows
 from windows.signup import SignupWindow
 from windows.login import LoginWindow
 from windows.settings import SettingsWindow
