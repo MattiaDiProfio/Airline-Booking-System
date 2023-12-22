@@ -23,7 +23,9 @@ Some of the features and functionalities included are:
 In order to make this project run on your machine, you will need to install a couple of things first if you don't have them already.
 
 - The database operations are executed using **MySQL Database** and the Python **mysql** module.
-- The GUI is implemented using **Python Tkinter** and all of its associated submodules, imported at the top of the **airline_frontend** file.
+- The GUI is implemented using **Python Tkinter**. 
+
+After having installed all the required packages, simply insert your credentials in the **config.py** file and you should be good to go.
 
 ## Credits & Reflections
 
