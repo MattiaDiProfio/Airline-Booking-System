@@ -1,6 +1,3 @@
-# Airline Reservation System - flights model
-# Mattia Di Profio
-
 class Graph:
     """class to represent a directed, unweighted graph"""
     def __init__(self):
@@ -8,7 +5,7 @@ class Graph:
     
     def add_edge(self, source, target):
         if source in self.g and target in self.g[source]:
-            return None # edge already in graph, therefore do not execute method
+            return None # Edge already in graph, therefore do not execute method
         if source not in self.g.keys():
             self.g[source] = []
         self.g[source].append(target)
@@ -17,7 +14,7 @@ class Graph:
     def path_exists(self, source, target):
         """returns True if target node can be reached from source node, otherwise False"""
 
-        # implementation of BFS starting from the source node
+        # Implementation of BFS starting from the source node
         visited, queue = [], [source]
         while queue:
             curr_node = queue.pop(0)

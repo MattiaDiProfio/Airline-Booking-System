@@ -8,29 +8,8 @@ import time
 import csv 
 from graph import *
 
-def email_is_valid(email):
-    # check whether input follows the format of a conventional email address
-    pattern = re.compile(r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+")
-    match = pattern.match(email)
-    return True if match else False
-
-def password_is_valid(password):
-    # check whether input follows format of specified password requirements
-    pattern = re.compile(r"^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!?@])[\w\d@!?]{5,30}$")
-    match = pattern.match(password)
-    return True if match else False
-
-def username_is_valid(username):
-    # check wheter input follows username requirements
-    pattern = re.compile(r"^[a-zA-Z0-9]{5,30}$")
-    match = pattern.match(username)
-    return True if match else False
-
-def fullname_is_valid(fullname):
-    # check whether input follows full name requirements
-    pattern = re.compile(r"^[a-zA-Z ]{5,30}$")
-    match = pattern.match(fullname)
-    return True if match else False
+# Import utility functions
+from utils import *
 
 class SignupWindow(Frame):
     def __init__(self, db, func):

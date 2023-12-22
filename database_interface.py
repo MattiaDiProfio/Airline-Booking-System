@@ -4,7 +4,7 @@ from mysql.connector.errors import *
 class DatabaseInterface():
     def __init__(self):
         # initialise the database and cursor
-        self.db = mysql.connector.connect(host = 'localhost', user = 'root', passwd = 'your_password', database = 'airline')
+        self.db = mysql.connector.connect(host = 'localhost', user = 'root', passwd = '?', database = 'airline')
         self.cursor = self.db.cursor(buffered=True)
         # create the 'users' table, if already exist then command is ignored
         try: self.cursor.execute("CREATE TABLE users (fullname VARCHAR(50), email VARCHAR(60), username VARCHAR(30), password VARCHAR(30))")
