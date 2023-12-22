@@ -1,7 +1,11 @@
 from tkinter import *
+from tkinter import messagebox
+from .settings import SettingsWindow
+from .userflights import UserFlightsWindow
+from .newbooking import NewBookingWindow
 
 class UserDashboard(Frame):
-    def __init__(self, username, password, network):
+    def __init__(self, username, password, network, db):
         super().__init__()
         self.top = Toplevel()
         self.db = db

@@ -1,4 +1,6 @@
 from tkinter import *
+from tkinter import ttk
+from tkinter import messagebox
 
 class NewBookingWindow(Frame):
     def __init__(self, username, db, network):

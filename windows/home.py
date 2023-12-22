@@ -45,7 +45,7 @@ class HomeWindow(Tk):
         if data['origin'] == 'login' and user_exists == 1:
             #user has an account and they successfully logged in
             messagebox.showinfo('Login Successfull', 'Click "ok" to proceed to your dashboard')
-            UserDashboard(data['username'], data['password'], self.network)
+            UserDashboard(data['username'], data['password'], self.network, self.db)
 
         elif data['origin'] == 'login' and user_exists == 0:
             #user doesnt have an account or they dont have the right credentials and they are trying to login
@@ -64,4 +64,4 @@ class HomeWindow(Tk):
             #user signups up with new account
             self.db.insert_newuser(data['fullname'], data['email'], data['username'], data['password'])
             messagebox.showinfo('Signup Successfull', 'Click "ok" to proceed to your dashboard')
-            UserDashboard(data['username'], data['password'], self.network)
+            UserDashboard(data['username'], data['password'], self.network, self.db)

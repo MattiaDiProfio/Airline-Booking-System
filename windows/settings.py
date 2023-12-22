@@ -1,4 +1,9 @@
+import sys
+sys.path.append('../')
+
 from tkinter import *
+from tkinter import messagebox
+from utils import *
 
 class SettingsWindow(Frame):
     def __init__(self, username, password, func, db):
@@ -48,13 +53,13 @@ class SettingsWindow(Frame):
         # check whether form input is valid and new username is not already used by someone else
         if self.settings_updates['new_email'].get() and not email_is_valid(self.settings_updates['new_email'].get()):
             messagebox.showerror('Invalid email', 'Please ensure that the email is in the correct format following "username@domainname.extension"')
-            SettingsWindow(self.func, self.db)
+            SettingsWindow(self.username, self.password, self.func, self.db)
         if self.settings_updates['new_username'].get() and (not username_is_valid(self.settings_updates['new_username'].get()) or self.db.username_exists(self.settings_updates['new_username'].get())):
             messagebox.showerror('Invalid username', 'Please ensure that the username is between 5-30 alphanumeric characters, othewise the userame chosen is already in use.')
-            SettingsWindow(self.func, self.db)
+            SettingsWindow(self.username, self.password, self.func, self.db)
         if self.settings_updates['new_password'].get() and not password_is_valid(self.settings_updates['new_password'].get()):
             messagebox.showerror('Invalid password', 'Please ensure that the password contains at least 1 uppercase letter, 1 lowercase letter, 1 number, 1 special character [!@?]')
-            SettingsWindow(self.func, self.db)
+            SettingsWindow(self.username, self.password, self.func, self.db)
 
         self.func(self.settings_updates)
         self.top.destroy()

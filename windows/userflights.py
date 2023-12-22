@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 
 class UserFlightsWindow(Frame):
     def __init__(self, username, db):
