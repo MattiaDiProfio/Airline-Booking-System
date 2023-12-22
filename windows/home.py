@@ -1,4 +1,8 @@
+from .login import LoginWindow
+from .signup import SignupWindow
 from tkinter import *
+from tkinter import messagebox
+from .userdashboard import UserDashboard
 
 class HomeWindow(Tk):
     def __init__(self, db, network):
@@ -36,7 +40,6 @@ class HomeWindow(Tk):
                 data[key] = form_data[key]
             else:
                 data[key] = form_data[key].get()
-        
 
         user_exists = self.db.user_exists(data['username'], data['password'])
         if data['origin'] == 'login' and user_exists == 1:

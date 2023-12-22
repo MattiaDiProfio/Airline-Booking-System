@@ -1,6 +1,9 @@
 import sys
 sys.path.append('../')
+
 from tkinter import *
+from tkinter import messagebox
+from utils import *
 
 class SignupWindow(Frame):
     def __init__(self, db, func):

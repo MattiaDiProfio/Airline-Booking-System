@@ -1,16 +1,19 @@
 import sys
 sys.path.append('../')
+
 from tkinter import *
-from tkinter import messagebox
-from mysql.connector.errors import *
 from tkinter import ttk
-from database_interface import DatabaseInterface
+from tkinter import messagebox
+
+from mysql.connector.errors import *
+
+from structs.database_interface import DatabaseInterface
+from structs.graph import Graph
+
 import re
 import time
 import csv 
-from graph import *
 
-# Import utility functions
 from utils import *
 
 # Import windows

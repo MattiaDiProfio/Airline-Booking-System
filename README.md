@@ -1,10 +1,12 @@
+# jetsetgo - airline booking system
 
 ## Introduction
 
 This project aims to implement a simple reservation system for a fictional airline company. While it was an option to build a web-based version of this project I went for a desktop-based approach, inspired by one of the projects from one of my university courses which revolved around Java Swing.
 
 Some of the features and functionalities included are:
-- creation / deletion of an account as well as login
+
+- creation & deletion of an account as well as login
 - input validation using mySQL and regex
 - supported update of user information
 - place booking / cancel booking for a specific flight
@@ -19,6 +21,7 @@ Some of the features and functionalities included are:
 ## Requirements
 
 In order to make this project run on your machine, you will need to install a couple of things first if you don't have them already.
+
 - The database operations are executed using **MySQL Database** and the Python **mysql** module.
 - The GUI is implemented using **Python Tkinter** and all of its associated submodules, imported at the top of the **airline_frontend** file.
 

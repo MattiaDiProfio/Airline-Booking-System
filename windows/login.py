@@ -1,4 +1,9 @@
+import sys
+sys.path.append('../')
+
 from tkinter import *
+from tkinter import messagebox
+from utils import username_is_valid, password_is_valid
 
 class LoginWindow(Frame):
     def __init__(self, db, func):
